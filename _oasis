@@ -1,0 +1,27 @@
+OASISFormat: 0.4
+Name:        huffman-code
+Version:     0.1.0
+Synopsis:    Pure OCaml implementation of Huffman codes
+Authors:     Thomas Gazagnaire
+License:     ISC
+Plugins:     META (0.4), DevFiles (0.4)
+BuildTools:  ocamlbuild
+
+Library "huffman-code"
+  CompiledObject:     best
+  Path:               lib
+  Findlibname:        huffman-code
+  Modules:            Huffman_code
+
+Executable test_hc
+  Path:           lib_test
+  MainIs:         test.ml
+  Build$:         flag(tests)
+  CompiledObject: best
+  Install:        false
+  BuildDepends:   huffman-code, oUnit, alcotest
+
+Test test_hc
+  Run$:             flag(tests)
+  Command:          $test_hc -q
+  WorkingDirectory: lib_test

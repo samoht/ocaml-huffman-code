@@ -1,0 +1,3 @@
+PKG oUnit alcotest
+B _build/**
+S lib/

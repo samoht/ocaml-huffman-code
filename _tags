@@ -1,0 +1,26 @@
+# OASIS_START
+# DO NOT EDIT (digest: 2320e91555f4ee25b44c8e5cc189894f)
+# Ignore VCS directories, you can use the same kind of rule outside
+# OASIS_START/STOP if you want to exclude directories that contains
+# useless stuff for the build process
+true: annot, bin_annot
+<**/.svn>: -traverse
+<**/.svn>: not_hygienic
+".bzr": -traverse
+".bzr": not_hygienic
+".hg": -traverse
+".hg": not_hygienic
+".git": -traverse
+".git": not_hygienic
+"_darcs": -traverse
+"_darcs": not_hygienic
+# Library huffman-code
+"lib/huffman-code.cmxs": use_huffman-code
+# Executable test_hc
+<lib_test/test.{native,byte}>: pkg_alcotest
+<lib_test/test.{native,byte}>: pkg_oUnit
+<lib_test/test.{native,byte}>: use_huffman-code
+<lib_test/*.ml{,i,y}>: pkg_alcotest
+<lib_test/*.ml{,i,y}>: pkg_oUnit
+<lib_test/*.ml{,i,y}>: use_huffman-code
+# OASIS_STOP

@@ -1,0 +1,11 @@
+# OASIS_START
+# DO NOT EDIT (digest: 6e5fbd10d2658b8732ba0e6ac450889e)
+version = "0.1.0"
+description = "Pure OCaml implementation of Huffman codes"
+archive(byte) = "huffman-code.cma"
+archive(byte, plugin) = "huffman-code.cma"
+archive(native) = "huffman-code.cmxa"
+archive(native, plugin) = "huffman-code.cmxs"
+exists_if = "huffman-code.cma"
+# OASIS_STOP
+
